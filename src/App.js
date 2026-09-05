@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import StorySlide from "./components/StorySlide";
 import Navigation from "./components/Navigation";
@@ -12,19 +12,19 @@ function App() {
 
   const totalSlides = storySlides.length;
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     if (currentSlide < totalSlides - 1) {
       setDirection("next");
       setCurrentSlide((prev) => prev + 1);
     }
-  };
+  }, [currentSlide, totalSlides]);
 
-  const previousSlide = () => {
+  const previousSlide = useCallback(() => {
     if (currentSlide > 0) {
       setDirection("previous");
       setCurrentSlide((prev) => prev - 1);
     }
-  };
+  }, [currentSlide]);
 
   /*
    * Keyboard navigation
@@ -45,7 +45,7 @@ function App() {
     return () => {
       window.removeEventListener("keydown", handleKeyboard);
     };
-  }, [currentSlide]);
+  }, [nextSlide, previousSlide]);
 
   /*
    * Mobile swipe
