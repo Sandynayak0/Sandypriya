@@ -1,7 +1,11 @@
+import slide1 from "../images/Slide1.png";
+import slide2 from "../images/Slide2.png";
+import slide3 from "../images/Slide3.png";
+import slide4 from "../images/Slide4.png";
 const storySlides = [
   {
     id: 1,
-    image: "/images/slide1.png",
+    image: "slide1",
 
     chapter: "OUR STORY with pain",
 
@@ -17,7 +21,7 @@ const storySlides = [
 
   {
     id: 2,
-    image: "/images/slide2.png",
+    image: "slide2",
 
     // chapter: "CHAPTER 01",
 
@@ -32,7 +36,7 @@ const storySlides = [
 
   {
     id: 3,
-    image: "/images/slide3.png",
+    image: "slide3",
 
     // chapter: "CHAPTER 02",
 
@@ -48,7 +52,7 @@ const storySlides = [
 
   {
     id: 4,
-    image: "/images/slide4.png",
+    image: "slide4",
 
     chapter: "THE END?",
 
