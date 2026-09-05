@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Doppio+One&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Full page */
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global font */
+body {
+  background: #111111;
+  color: white;
+  overflow: hidden;
+  font-family: "Doppio One", sans-serif;
+}
+
+/* Make all elements inherit Doppio One */
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* Selection */
+::selection {
+  background: rgba(255, 79, 154, 0.35);
+  color: white;
+}
+
+/* Subtle film grain */
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+}
