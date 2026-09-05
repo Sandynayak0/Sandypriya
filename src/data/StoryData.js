@@ -3,7 +3,7 @@ const storySlides = [
     id: 1,
     image: "/images/slide1.png",
 
-    chapter: "OUR STORY",
+    chapter: "OUR STORY with pain",
 
     title: "Two People. One Story.",
 
